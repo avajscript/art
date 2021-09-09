@@ -1,0 +1,120 @@
+// Variables
+$light-grey: #d3d3d3;
+$black: black;
+$white: white;
+.main-content {
+  padding-top: 0;
+  margin-top: 10rem;
+  width: 90%;
+  max-width: none;
+  border: 1px solid black;
+}
+
+p {
+  font-family: "Open sans";
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+header.header {
+  p {
+    margin-bottom: 0;
+    font-family: "Jack Armstrong";
+    font-weight: 400;
+  }
+}
+
+// Reusable
+.article {
+  padding: 20px;
+}
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
+// End of reusable
+.links {
+  margin-top: 2rem;
+}
+.request-section {
+  padding: 20px;
+  position: relative;
+}
+input,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  outline: none;
+  font-family: "Open sans";
+}
+textarea {
+  resize: none;
+  background: $light-grey;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  font-family: "Open sans";
+}
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input {
+  background: $light-grey;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+}
+input[type="submit"] {
+  color: $white;
+  background-color: $black;
+  border-radius: 0.75rem;
+  margin-top: 10px;
+  padding: 10px 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  &:active {
+    box-shadow: none;
+  }
+}
+
+form {
+  padding: 20px;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 5px 3px grey;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "a a b b"
+    "c c d d"
+    "e e e e";
+  gap: 20px;
+}
+
+.a {
+  grid-area: a;
+}
+.b {
+  grid-area: b;
+}
+
+.c {
+  grid-area: c;
+}
+.d {
+  grid-area: d;
+}
+.e {
+  grid-area: e;
+}
+
+.submit {
+  display: flex;
+  justify-content: flex-end;
+}

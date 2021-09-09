@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art and Tattoo</title>
+    <script src="../scripts/navbar.js"></script>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/contactStyles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <header class="header">
+        <div class="header-content">
+          <div class="logo"></div>
+          <nav>
+            <div class="desktop nav-desktop">
+              <div class="flex-container">
+                <div class="flex nav-logo">
+                  <img src="https://dummyimage.com/100x100/000/fff&text=art" />
+                </div>
+                <div class="flex-container-center flex nav-text">
+                  <div class="flex-center">
+                    <a href="../index.html"><p>HOME</p> </a>
+                  </div>
+                  <div class="flex-center artwork-nav">
+                    <a href="#"><p>ARTWORK</p> </a>
+                    <div class="artwork-dropdown hide">
+                      <ul>
+                        <li><a href="#">Recent</a></li>
+                        <li><a href="#">Watercolour</a></li>
+                        <li><a href="#">Coloured Pencil</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flex-center">
+                    <a href="./tattoos.html"><p>TATTOOS</p></a>
+                  </div>
+                  <div class="flex-center">
+                    <a href="../index/about.html"><p>ABOUT</p></a>
+                  </div>
+                  <div class="flex-center">
+                    <a href="../index/contact.html"><p>CONTACT</p></a>
+                  </div>
+                </div>
+              </div>
+              <!-- End of flex-container-desktop-->
+            </div>
+            <div class="mobile nav-mobile">
+              <div class="flex-container">
+                <div class="logo flex">
+                  <img
+                    src="https://dummyimage.com/50x50/000/fff&text=Art"
+                    alt="left align logo"
+                  />
+                </div>
+                <div class="nav-button">
+                  <img src="../images/icon-hamburger.svg" />
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- End of header-->
+      <div class="main-content">
+        <div class="flex-container">
+          <div class="flex article">
+            <h1>Contact Info</h1>
+            <p>
+              If you have any further questions about purchasing my artwork,
+              tattoo ideas or scheduling an appointment please contact me.
+            </p>
+            <p>
+              Please Let me know if there is any artwork you are interested in.
+              I will be sure to get back to you as soon as possible.
+            </p>
+            <div class="links">
+              <a href="tel:1-613-220-1173"><p>(613) 220 1173</p></a>
+              <a href="mailto:matt-pierce@hotmail.com"
+                ><p>Barb@coachinghorizons.com</p></a
+              >
+            </div>
+          </div>
+
+          <div class="flex">
+            <picture>
+              <img src="https://dummyimage.com/600x400/000/fff" />
+            </picture>
+          </div>
+        </div>
+        <!-- End of top section -->
+        <div class="request-section">
+          <header>
+            <h1>Submit A Request</h1>
+          </header>
+          <form action="">
+            <div class="grid-container">
+              <input type="text" id="name" class="a" placeholder="Name" />
+              <input
+                type="email"
+                id="email"
+                class="b"
+                placeholder="Email Address"
+              />
+              <input
+                type="number"
+                id="phone-number"
+                class="c"
+                placeholder="Phone Number"
+              />
+              <input
+                type="subject"
+                id="subject"
+                class="d"
+                placeholder="Subject"
+              />
+              <textarea class="e" id="message" placeholder="Message"></textarea>
+            </div>
+            <div class="clearfix submit">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- End of main content-->
+    </div>
+    <!-- End of main-->
+  </body>
+</html>

@@ -1,0 +1,268 @@
+// Variables
+$black: black;
+$white: white;
+$background-sides: white;
+$slider: white;
+@font-face {
+  src: url("../fonts/Jack\ Armstrong.ttf");
+  font-family: "Jack Armstrong";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  font-family: "Jack Armstrong";
+  font-weight: 400;
+}
+
+// Base styles
+.main,
+body,
+html {
+  height: 100%;
+}
+.main {
+  background-color: white;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+// End of base styles
+
+// Reusable
+
+.flex-container {
+  display: flex;
+}
+.flex-container-center {
+  display: flex;
+  align-items: flex-end;
+}
+.flex-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.flex {
+  flex: 1;
+}
+.desktop {
+  display: none;
+}
+
+.hide {
+  max-height: 0;
+  opacity: 0%;
+  overflow: hidden;
+}
+
+.nav-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  img {
+    height: 32px;
+  }
+}
+// End of reusable
+.nav-logo {
+  flex-basis: 30%;
+}
+.nav-text {
+  flex-basis: 70%;
+}
+header.header {
+  background-color: $white;
+  box-shadow: 0 5px 15px black;
+  position: fixed;
+
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  img {
+    display: block;
+  }
+  nav {
+    .flex-center {
+      &:hover {
+        background-color: $black;
+      }
+      &:hover a p {
+        color: $white;
+      }
+    }
+    a {
+      font-family: "Jack Armstrong";
+      padding: 20px;
+    }
+  }
+}
+
+.header-content {
+  margin: 0 5%;
+}
+
+.main-content {
+  position: relative;
+
+  width: 80%;
+  max-width: 800px;
+  padding-top: 100px;
+  margin: 60px auto 0;
+
+  img {
+    width: 100%;
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+.nav-mobile {
+  padding: 20px 0;
+}
+.nav-desktop {
+  position: relative;
+  .flex-center {
+    position: relative;
+  }
+  .artwork-dropdown {
+    transition: all 1s;
+    background: $white;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+
+    text-align: center;
+    border: 2px solid black;
+    ul {
+      height: 100%;
+    }
+    li {
+      padding: 5px 0;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      &:hover {
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+      }
+    }
+    a {
+      padding: 0;
+    }
+  }
+}
+// Start of slider
+.slider {
+  overflow: hidden;
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+}
+.slides {
+  width: 500%;
+
+  height: 500px;
+  display: flex;
+}
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+.slides input {
+  display: none;
+}
+.navigation-manual {
+  position: relative;
+  width: 800px;
+  margin-top: -40px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid $slider;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  &:not(:last-child) {
+    margin-right: 40px;
+    &:hover {
+      background: $slider;
+    }
+  }
+}
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid $slider;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: $slider;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: $slider;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: $slider;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: $slider;
+}
+
+// End of slider
+
+@media screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+}

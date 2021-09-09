@@ -1,0 +1,39 @@
+.main-content {
+  padding-top: 0;
+  margin-top: 10rem;
+  width: 90%;
+  max-width: none;
+}
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  padding: 0 4px;
+}
+
+.content-container img {
+  width: 100%;
+}
+
+.column {
+  max-width: 100%;
+  flex: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .column {
+    max-width: 50%;
+    flex: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .column {
+    max-width: 33.33%;
+    flex: 33.33%;
+  }
+}
